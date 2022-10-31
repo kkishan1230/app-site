@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 bg-[#e7eaed] p-0 font-body text-[#232428];
+  }
+}
+
+@layer components {
+  .hyperLinks {
+    @apply opacity-80 hover:opacity-100 active:opacity-100;
+  }
+  .link {
+    @apply relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0 before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-black before:transition-all before:duration-200 hover:before:scale-x-100;
+  }
+  .tabPanel {
+    @apply grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3;
+  }
+}
